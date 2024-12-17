@@ -1,0 +1,165 @@
+/** @type {import('tailwindcss').Config} */
+const colors = require('tailwindcss/colors');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+  content: ['src/**/*.{js,jsx,ts,tsx}'],
+  theme: {
+    colors: {
+      ...colors,
+      // Although this is Blue we'll slowly replace it with darkIndigo name to match the design system naming
+      DarkIndigo: '#180052',
+      CoolGray: '#929BAA',
+      NeutralGray: '#FBFAFC',
+      AlmostWhiteGray: '#FBFBFB',
+      DoveGray: '#CFD5DE',
+      LightGray: '#F7F8FA',
+      SoftLavender: '#E5E7FF',
+      MediumLavender: '#D3CFDE',
+      Placeholder: '#BBB7C4',
+      InputCount: '#564D6B',
+      Invalid: '#AB220A',
+      TitleGray: '#7D7D7D',
+      TextGray: '#9C9C9C',
+      BorderGray: '#E2E2E2',
+      ElectricBlue: '#1414C1',
+      Glandhalf: '#EAE9F0',
+      PennBlue: '#0C1452',
+      Iris: '#444AE1',
+      Blue: '#180052',
+      BlueGray: '#4D586B',
+      Green: '#40C98B',
+      SuccessBannerBackground: '#E2F7F0',
+      SuccessBannerBorder: '#40C998',
+      Purple: '#651FFE',
+      Hover: '#FAFAFA',
+      White: '#FFFFFF',
+      Whitish: '#FFFDF8',
+      Gray: '#1D1D1D',
+      LightGrayOld: '#DCD9E5',
+      GrayDark: '#A8AFB8',
+      GrayLight: '#F6F6F6',
+      Red: '#F64138',
+      Mint: '#40C98B',
+      OffWhite: '#F5F5F5',
+      StormySky: '#62647D',
+
+      Black: '#0A0013',
+      Orange: '#FC5508',
+      OrangeLight: '#FA7132',
+      Yellow: '#FFC933',
+      Cream: '#F8F7F2',
+      Charcoal: '#434343',
+      Indigo: '#6C2FED',
+      IndigoLight: '#FBFAFF',
+    },
+    extend: {
+      screens: {
+        ...defaultTheme.screens,
+        'sign-up-page': '915px',
+        'customer-page': '1280px',
+        'profile-page-lg': '1665px',
+        'profile-page-md': '1280px',
+        xxs: '376px',
+        xs: '431px',
+      },
+      fontSize: {
+        'custom-extra-large': '40px',
+        'custom-large': '32px',
+        'custom-medium': '24px',
+        'custom-small': '16px',
+        'custom-extra-small': '14px',
+      },
+      lineHeight: {
+        'custom-extra-large': '56px',
+        'custom-large': '48px',
+        'custom-medium': '32px',
+        'custom-small': '24px',
+        'custom-extra-small': '24px',
+      },
+      fontFamily: {
+        firs: ['Firs', 'Epilogue', 'sans-serif'],
+        inter: ['Inter', 'sans-serif'],
+        epilogue: ['Epilogue', 'sans-serif'],
+      },
+      borderRadius: {
+        3: '3px',
+      },
+      borderWidth: {
+        1: '1px',
+        1.5: '1.5px',
+      },
+      boxShadow: {
+        strong: '0px 6px 12px 0px rgba(12, 20, 82, 0.20)',
+        strongUp: '0px -6px 12px 0px rgba(12, 20, 82, 0.20)',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' },
+        },
+        slideInUp: {
+          '0%': { transform: 'translateY(100%)' },
+          '100%': { transform: 'translateY(0)' },
+        },
+        slideOutUp: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(100%)' },
+        },
+        slideInRight: {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideOutRight: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
+        slideInLeft: {
+          '0%': { transform: 'translateX(-100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideOutLeft: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
+        },
+        slideDownOpen: {
+          '0%': { transform: 'scaleY(0)', transformOrigin: 'top' },
+          '100%': { transform: 'scaleY(1)', transformOrigin: 'top' },
+        },
+        slideDownClose: {
+          '0%': { transform: 'scaleY(1)', transformOrigin: 'top' },
+          '100%': { transform: 'scaleY(0)', transformOrigin: 'top' },
+        },
+        slideUpOpen: {
+          '0%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+          '100%': { transform: 'scaleY(1)', transformOrigin: 'bottom' },
+        },
+        slideUpClose: {
+          '0%': { transform: 'scaleY(1)', transformOrigin: 'bottom' },
+          '100%': { transform: 'scaleY(0)', transformOrigin: 'bottom' },
+        },
+      },
+      animation: {
+        fadeIn: 'fadeIn 200ms ease-in-out forwards',
+        fadeOut: 'fadeOut 200ms ease-in-out forwards',
+        fadeInDelay: 'fadeIn 200ms ease-in-out 200ms forwards',
+        fadeOutDelay: 'fadeOut 200ms ease-in-out 200ms forwards',
+        slideInUp: 'slideInUp 200ms ease-in-out forwards',
+        slideOutUp: 'slideOutUp 200ms ease-in-out forwards',
+        slideInRight: 'slideInRight 200ms ease-in-out forwards',
+        slideOutRight: 'slideOutRight 200ms ease-in-out forwards',
+        slideInLeft: 'slideInLeft 200ms ease-in-out forwards',
+        slideOutLeft: 'slideOutLeft 200ms ease-in-out forwards',
+        slideDownOpen: 'slideDownOpen 200ms ease-in-out forwards',
+        slideDownClose: 'slideDownClose 200ms ease-in-out forwards',
+        slideUpOpen: 'slideUpOpen 200ms ease-in-out forwards',
+        slideUpClose: 'slideUpClose 200ms ease-in-out forwards',
+      },
+    },
+  },
+  plugins: [require('@tailwindcss/forms')],
+};
